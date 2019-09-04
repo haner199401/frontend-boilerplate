@@ -1,10 +1,10 @@
 
 # Frontend Boilerplate
-
-[![Greenkeeper Status](https://badges.greenkeeper.io/ViZhe/frontend-boilerplate.svg)](https://greenkeeper.io/)
-[![Build Status](https://travis-ci.org/ViZhe/frontend-boilerplate.svg?branch=master)](https://travis-ci.org/ViZhe/frontend-boilerplate)
-[![Dependency Status](https://david-dm.org/ViZhe/frontend-boilerplate/dev-status.svg)](https://david-dm.org/ViZhe/frontend-boilerplate#info=devDependencies)
-
+一个静态网站开发模板,基于 (https://github.com/ViZhe/frontend-boilerplate)[https://github.com/ViZhe/frontend-boilerplate]进行二次修改.
+ - 添加 静态文件夹copy
+ - 删除 webpack编译文件
+ - 移除 scss,添加 less
+ - 
 ## Browser Support
 
 * latest Chrome & Firefox & Safari
@@ -13,7 +13,7 @@
 ## Setup
 
 ```bash
-git clone git@github.com:ViZhe/frontend-boilerplate.git <projectname>
+git clone https://github.com/haner199401/frontend-boilerplate.git <projectname>
 cd <projectname>
 rm -rf .git
 npm ci
