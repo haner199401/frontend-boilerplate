@@ -1,6 +1,6 @@
 import gulp from 'gulp'
-import config from '../config'
 import plumber from 'gulp-plumber'
+import config from '../config'
 
 export default class {
   static copy() {

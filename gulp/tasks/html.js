@@ -8,14 +8,14 @@ import config from '../config'
 
 
 class Html {
-    static build() {
-        return gulp.src(config.html.src)
-            .pipe(plumber(config.plumber))
-            .pipe(ejs({}, {}, {ext: '.html'}))
-            // .pipe(replace('/frontend/','./frontend/'))
-            .pipe(rename({extname: '.html'}))
-            .pipe(gulp.dest(config.html.dest))
-    }
+  static build() {
+    return gulp.src(config.html.src)
+      .pipe(plumber(config.plumber))
+      .pipe(ejs({}, {}, {ext: '.html'}))
+    // .pipe(replace('/frontend/','./frontend/'))
+      .pipe(rename({extname: '.html'}))
+      .pipe(gulp.dest(config.html.dest))
+  }
 }
 
 

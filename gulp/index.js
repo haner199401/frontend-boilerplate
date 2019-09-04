@@ -1,5 +1,5 @@
 
-import gulp,{src,dest,series} from 'gulp'
+import gulp, {src, dest, series} from 'gulp'
 import RevAll from 'gulp-rev-all'
 import Scripts from './tasks/scripts'
 import Styles from './tasks/styles'
@@ -26,7 +26,7 @@ gulp.task('server', Server.run)
 gulp.task('build', gulp.series([
   'clean',
   'images:build',
-    'static:copy',
+  'static:copy',
   'styles:build',
   'scripts:lint', 'scripts:build',
   'html:build',
@@ -44,11 +44,8 @@ gulp.task('default', gulp.series([
   gulp.parallel(['watch', 'server']),
 ]))
 
-gulp.task('rev',function () {
-        return src([config.dest + '**'])
-            .pipe(RevAll.revision({ dontRenameFile: [/^\/favicon.ico$/g, '.html'] }))
-            .pipe(dest(config.dest))
-})
+gulp.task('rev', () => src([`${config.dest}**`])
+  .pipe(RevAll.revision({dontRenameFile: [/^\/favicon.ico$/g, '.html']}))
+  .pipe(dest(config.dest)))
 
-gulp.task('build:prod',series(['build','rev']))
-
+gulp.task('build:prod', series(['build', 'rev']))

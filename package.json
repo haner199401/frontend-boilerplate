@@ -1,9 +1,6 @@
 {
   "name": "frontend-boilerplate",
-  "version": "7.0.4",
-  "author": {
-    "name": "ViZhe"
-  },
+  "version": "1.0.0",
   "scripts": {
     "start": "gulp",
     "build": "gulp build",

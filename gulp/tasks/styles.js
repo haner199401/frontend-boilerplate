@@ -27,14 +27,14 @@ class Styles {
         cssMqpacker({
           sort: (a, b) => a.localeCompare(b),
         }),
-          postcssPresetEnv({
-              stage: 0,
-              features: {
-                  'nesting-rules': true,
-                  'color-mod-function': true,
-                  'custom-media': true,
-              },
-          }),
+        postcssPresetEnv({
+          stage: 0,
+          features: {
+            'nesting-rules': true,
+            'color-mod-function': true,
+            'custom-media': true,
+          },
+        }),
       ]))
       .pipe(less())
       // .pipe(replace('/frontend/','../'))

@@ -11,7 +11,7 @@ class Scripts {
   static build() {
     return gulp.src(config.scripts.src)
       .pipe(plumber(config.plumber))
-        .pipe(babel())
+      .pipe(babel())
       .pipe(gulp.dest(config.scripts.dest))
   }
 

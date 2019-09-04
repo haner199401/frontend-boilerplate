@@ -27,7 +27,7 @@ const headerCat = `
  *                $$$_$_____$______$_$$$
  *                     $$$$___$$$$$
  */
-`;
+`
 
 function errorHandler(err) {
   util.log([(`${err.name} in ${err.plugin}`).bold.red, '', err.message, ''].join('\n'))
@@ -62,7 +62,7 @@ const config = {
         relative: true,
         cache: true,
         cachebuster: true,
-      }
+      },
     },
     less: {
 
@@ -94,11 +94,11 @@ const config = {
       use: [imageminPngquant()],
     },
   },
-    static: {
-        src: `${path.src}static/**/*`,
-        watch: `${path.src}static/**/*`,
-        dest: `${path.dest}static/`,
-    }
+  static: {
+    src: `${path.src}static/**/*`,
+    watch: `${path.src}static/**/*`,
+    dest: `${path.dest}static/`,
+  },
 }
 
 
