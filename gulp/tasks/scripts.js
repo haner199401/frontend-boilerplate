@@ -53,12 +53,6 @@ class Scripts {
       .pipe(eslint.format())
   }
 
-  static travis() {
-    return gulp.src(config.scripts.src.all)
-      .pipe(eslint())
-      .pipe(eslint.format())
-      .pipe(eslint.failAfterError())
-  }
 }
 
 

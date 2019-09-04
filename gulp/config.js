@@ -6,7 +6,7 @@ import yargs from 'yargs'
 
 const headerCat = `
 /*!
- *                  $$____________$$
+ *                  $$___我是猪洋___$$
  *                  $___$________$___$
  *                  $_____$$$$$$_____$
  *                 $_____sss___sss____$
@@ -15,11 +15,11 @@ const headerCat = `
  *     $$$$$$$$     $_______$________$
  *   $$________$       $$_________$$
  *    $_________$     $___$$$$$___$
- *       $______$    $__$________$__$
- *       $_____$    $__$__________$__$
- *      $____$   $$$$__$__________$__$$$$
- *     $___$    $____$__$________$___$___$
- *     $__$     $____$__$________$__$____$
+ *       $______$    $__$___佛____$__$
+ *       $_____$    $__$____祖_____$__$
+ *      $____$   $$$$__$____保____$__$$$$
+ *     $___$    $____$__$___佑___$___$___$
+ *     $__$     $____$__$___!____$__$____$
  *    $___$      $____$__$____$_$__$____$
  *      $__$      $____$___$_$_____$___$
  *       $___$$$$$_$___$___$_$____$___$
@@ -27,7 +27,7 @@ const headerCat = `
  *                $$$_$_____$______$_$$$
  *                     $$$$___$$$$$
  */
-`
+`;
 
 function errorHandler(err) {
   util.log([(`${err.name} in ${err.plugin}`).bold.red, '', err.message, ''].join('\n'))
@@ -51,41 +51,21 @@ const config = {
     errorHandler,
   },
   styles: {
-    src: {
-      main: `${path.src}styles/index.scss`,
-      all: `${path.src}styles/**/*.scss`,
-    },
-    dest: `${path.dest}frontend/styles/`,
-    watch: `${path.src}styles/**/*.scss`,
+    src: `${path.src}styles/*.less`,
+    dest: `${path.dest}/styles/`,
+    watch: `${path.src}styles/**/*.less`,
     postcss: {
       assets: {
         loadPaths: [
-          `${path.dest}frontend/media`,
+          `${path.dest}/image`,
         ],
         relative: true,
         cache: true,
         cachebuster: true,
-      },
-      autoprefixer: {
-        browsers: [
-          '> 5%',
-          'last 2 versions',
-          'Explorer >= 10',
-          'iOS >= 7.1',
-        ],
-      },
+      }
     },
-    sass: {
-      outputStyle: 'expanded',
-    },
-  },
-  fonts: {
-    src: `${path.src}fonts/fonts.css`,
-    dest: `${path.dest}frontend/styles/`,
-    watch: `${path.src}fonts/*.css`,
-    base64: {
-      extensions: ['woff'],
-      maxImageSize: 1024 * 1024 * 10,
+    less: {
+
     },
   },
   html: {
@@ -93,7 +73,6 @@ const config = {
     dest: path.dest,
     watch: [
       `${path.src}**/*.ejs`,
-      `${path.src}modules/**/*.ejs`,
     ],
   },
   scripts: {
@@ -101,13 +80,13 @@ const config = {
       main: `${path.src}scripts/index.js`,
       all: `${path.src}scripts/**/*.js`,
     },
-    dest: `${path.dest}frontend/scripts/`,
+    dest: `${path.dest}scripts/`,
     watch: `${path.src}scripts/**/*.js`,
   },
   images: {
-    src: `${path.src}media/**/*`,
-    dest: `${path.dest}frontend/media/`,
-    watch: `${path.src}media/**/*`,
+    src: `${path.src}images/**/*`,
+    dest: `${path.dest}images/`,
+    watch: `${path.src}images/**/*`,
     imagemin: {
       progressive: true,
       interlaced: true,
