@@ -1,10 +1,4 @@
 
-// import scrollUp from './plugins/scrollUp'
+$(document).ready(() => {
 
-
-// $(document).ready(() => {
-//   scrollUp()
-// })
-
-// $('*').on('click', () => {
-// })
+})

@@ -4,7 +4,6 @@ import gIf from 'gulp-if'
 import plumber from 'gulp-plumber'
 import less from 'gulp-less'
 import postcss from 'gulp-postcss'
-import postcssScss from 'postcss-scss'
 import postcssEasyImport from 'postcss-easy-import'
 import postcssPresetEnv from 'postcss-preset-env'
 import postcssAssets from 'postcss-assets'
@@ -36,9 +35,7 @@ class Styles {
                   'custom-media': true,
               },
           }),
-      ], {
-        parser: postcssScss,
-      }))
+      ]))
       .pipe(less())
       // .pipe(replace('/frontend/','../'))
       .pipe(gIf(config.isProd, cssnano()))

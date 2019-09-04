@@ -7,6 +7,8 @@ import Html from './tasks/html'
 import Images from './tasks/images'
 import Clean from './tasks/clean'
 import Server from './tasks/server'
+import Static from './tasks/static'
+
 import config from './config'
 
 
@@ -18,11 +20,13 @@ gulp.task('styles:build', Styles.build)
 gulp.task('html:build', Html.build)
 gulp.task('images:build', Images.build)
 gulp.task('clean', Clean.delete)
+gulp.task('static:copy', Static.copy)
 gulp.task('server', Server.run)
 
 gulp.task('build', gulp.series([
   'clean',
   'images:build',
+    'static:copy',
   'styles:build',
   'scripts:lint', 'scripts:build',
   'html:build',

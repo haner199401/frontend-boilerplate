@@ -76,10 +76,7 @@ const config = {
     ],
   },
   scripts: {
-    src: {
-      main: `${path.src}scripts/index.js`,
-      all: `${path.src}scripts/**/*.js`,
-    },
+    src: `${path.src}scripts/**/*.js`,
     dest: `${path.dest}scripts/`,
     watch: `${path.src}scripts/**/*.js`,
   },
@@ -97,6 +94,11 @@ const config = {
       use: [imageminPngquant()],
     },
   },
+    static: {
+        src: `${path.src}static/**/*`,
+        watch: `${path.src}static/**/*`,
+        dest: `${path.dest}static/`,
+    }
 }
 
 
